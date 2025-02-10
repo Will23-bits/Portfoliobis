@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet">
+
+    <style>
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hidden {
+            display: none;
+        }
+
+        #competences-content {
+            max-height: 200px; 
+            overflow-y: auto;
+            padding-right: 10px; 
+        }
+    </style>
+    <script>
+        function toggleCompetences() {
+            document.getElementById("competences-content").classList.toggle("hidden");
+        }
+    </script>
+</head>
+
+<body class="relative">
+
+    <video class="video-background" autoplay loop muted>
+        <source src="./Videos/t.mp4" type="video/mp4">
+    </video>
+
+    <header class="flex items-center justify-center h-40 bg-slate-900 bg-opacity-40">
+        <div class="z-30 p-5 text-2xl rounded-xl">
+            <div class="flex items-center text-white mb-2">
+                <span class="font-semibold text-4xl">Ferreira Pereira William</span>
+            </div>
+            <div class="text-opacity-30 text-white">
+                <span class="font-semibold text-xl">Étudiant en pré MSc Pro</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex justify-center mx-5 lg:mx-20 mt-10">
+        <section class="relative z-30 p-5 bg-slate-950 bg-opacity-50 rounded-xl w-full lg:w-3/4">
+            <h3 class="text-center text-white font-bold text-4xl mb-5 cursor-pointer" onclick="toggleCompetences()">Compétences ▼</h3>
+            <div id="competences-content" class="hidden text-white text-center">
+                <strong>Langages Informatiques :</strong> HTML - Java - CSS - JavaScript - PHP - Python - C++  <br>
+                <strong>Réseau :</strong> Configuration de routeurs et switches - Protocoles TCP/IP - Sécurité réseau<br>
+                <strong>Base de Données :</strong> MySQL - PostgreSQ - MongoDB<br>
+                <strong>Divers :</strong> Git - Docker - Linux - API REST - NodeJS - React - Laragon - Jira - Azure - Wordpress
+            </div>
+        </section>
+    </div>
+
+    <div class="flex justify-center mx-5 lg:mx-20 mt-10">
+        <section class="relative z-30 p-5 bg-slate-950 bg-opacity-50 rounded-xl">
+            <h3 class="text-center text-white font-bold text-4xl mb-5">Projets</h3>
+            <ul class="text-white list-disc list-inside">
+                <li><strong>Portfolio Personnel</strong> - Site web mettant en avant mes compétences et expériences.</li>
+                <li><strong>Application de gestion</strong> - Développement d'une application CRUD en PHP et MySQL.</li>
+                <li><strong>Jeu Vidéo en Java avec libGDX</strong> - Développement d'un jeu vidéo orienté objet utilisant la bibliothèque libGDX.</li>
+                <li><strong>Projet Réseau avec VM</strong> - Mise en place d'un réseau avec des machines virtuelles, configuration d'un serveur DHCP, connexion à un serveur web, et interaction entre deux VM pour simuler un environnement réseau complet.</li>
+
+
+            </ul>
+        </section>
+    </div>
+
+    <div class="flex justify-center mx-5 lg:mx-20 mt-10">
+        <section class="relative z-30 p-5 bg-slate-950 bg-opacity-50 rounded-xl">
+            <h3 class="text-center text-white font-bold text-4xl mb-5">Expériences Professionnelles</h3>
+            <ul class="text-white list-disc list-inside">
+                <li><strong>Stage Maintenance du Site Web</strong> — Lycée Maurice Ravel (8 semaines, 2023-2024)</li>
+                <li><strong>Stage Technicien Réseau</strong> — Numeritek - Support informatique du Bivwak (8 semaines, 2023)</li>
+                <li><strong>Stage Développeur Web Design</strong> — IFWEB (4 semaines, 2022)</li>
+                <li><strong>Stage Technicien Réseau</strong> — Vivescia, Ivry-sur-Seine (4 semaines, 2022)</li>
+                <li><strong>Stage Technicien</strong> — Service Com, Champigny-sur-Marne (4 semaines, 2021)</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="flex justify-center mx-5 lg:mx-20 mt-10">
+        <section class="relative z-30 p-5 bg-slate-950 bg-opacity-50 rounded-xl">
+            <h3 class="text-center text-white font-bold text-4xl mb-5">Formation</h3>
+            <ul class="text-white list-disc list-inside">
+                <li><strong>Epitech</strong> — Pré-MSc Pro (En cours)</li>
+                <li><strong>Lycée Turgot</strong> — BTS SIO SLAM (Obtenu en 2024)</li>
+                <li><strong>Gourdou Leseurre</strong> — Baccalauréat professionnel systèmes numériques, option réseaux informatiques et systèmes communicants (Mention Bien)</li>
+                <li><strong>Collège Paul Éluard Bonneuil-sur-Marne</strong> — Brevet du Collège (Obtenu)</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+
+</html>
